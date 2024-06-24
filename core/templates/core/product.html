@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block contenido %}
+
+<!-- PRODUCTOS -->
+<div class="container mt-5 text-center">
+    <h1 class="mt-5">Listado de Productos</h1>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <!-- Producto 1 -->
+        <div class="col-md-4 mb-4">
+            {% for aux in listaProductos %}
+            <div class="card">
+                <img src="{{ aux.imagen.url }}" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">{{ aux.nombre }}</h5>
+                    <p class="card-text">{{ aux.precio }}</p>
+                    <p class="card-text">Stock: {{ aux.stock }}</p>
+                    <a href="{% url 'agregar' %}" class="btn btn-primary">Agregar Producto</a>
+                    <a href="{% url 'actualizar' aux.codigo_producto %}" class="btn btn-primary">Modificar</a>
+                    <a href="{% url 'eliminar' aux.codigo_producto %}" class="btn btn-primary">Eliminar</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+	

@@ -1,0 +1,11 @@
+django == 4.0.4
+django-admin-interface
+django-crispy-forms
+django-bootstrap4
+pillow
+django-rest-framework
+request
+psycopg2
+django-axes
+django-recaptcha
+django-simple-captcha

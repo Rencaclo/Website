@@ -5,7 +5,10 @@ django-bootstrap4
 pillow
 django-rest-framework
 request
-psycopg2
+psycopg2-binary
 django-axes
 django-recaptcha
 django-simple-captcha
+whitenoise
+zeep
+# pip install -r requirements.txt

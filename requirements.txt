@@ -11,4 +11,6 @@ django-recaptcha
 django-simple-captcha
 whitenoise
 zeep
+cloudinary
+djangorestframework
 # pip install -r requirements.txt
